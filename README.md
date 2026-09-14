@@ -26,13 +26,13 @@ A modern and responsive laptop store website built using HTML, CSS, JavaScript, 
 ## Screenshots
 
 ### Screen1
-![Home Page](screenshots/Main.jpeg)
+![Home Page](Screenshots/Main.jpeg)
 
 ### Screen2
-![Brands Gallery](screenshots/Sec1.jpeg)
+![Brands Gallery](Screenshots/Sec1.jpeg)
 
 ### Screen3
-![Login Modal](screenshots/Sec2.jpeg)
+![Login Modal](Screenshots/Sec2.jpeg)
 
 ## Project Structure
 
