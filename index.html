@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LapZone - Laptop Tech</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="image/pexels-morningtrain-18104.jpg"
+            alt="LapZone Logo"
+            class="nav-logo"
+          />
+          LapZone
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="bb navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-home me-2"></i>Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-laptop me-2"></i>Laptops
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Gaming Laptops</a></li>
+                <li><a class="dropdown-item" href="#">Business Laptops</a></li>
+                <li><a class="dropdown-item" href="#">Ultrabooks</a></li>
+                <li><a class="dropdown-item" href="#">Budget Laptops</a></li>
+                <li><a class="dropdown-item" href="#">Workstations</a></li>
+                <li><a class="dropdown-item" href="#">2-in-1 Convertibles</a></li>
+                <li><a class="dropdown-item" href="#">More...</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-info-circle me-2"></i>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-shopping-cart me-2"></i>Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-blog me-2"></i>Blog</a>
+            </li>
+          </ul>
+          <form class="search-form d-flex">
+            <input
+              class="btns form-control me-2 eslam"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary me-2 search-btn" type="submit">
+              Search
+            </button>
+            <button
+              class="login-btn"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide">
+          <div class="hero-content-wrapper">
+            <div class="hero-content">
+              <h1>GAMING LAPTOPS</h1>
+              <p class="lead">Powerful performance for gamers!</p>
+              <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-content-wrapper">
+            <div class="hero-content">
+              <h1>ULTRABOOKS</h1>
+              <p class="lead">Sleek, lightweight, and powerful!</p>
+              <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-content-wrapper">
+            <div class="hero-content">
+              <h1>BUSINESS LAPTOPS</h1>
+              <p class="lead">Professional grade for productivity!</p>
+              <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-content-wrapper">
+            <div class="hero-content">
+              <h1>CONVERTIBLES</h1>
+              <p class="lead">Laptop and tablet in one device!</p>
+              <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-icons">
+        <a class="aa1" href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a class="aa2" href="#"><i class="fab fa-whatsapp"></i></a>
+        <a class="aa3" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="aa4" href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="arrows-left">
+        <button id="prevBtn" hidden>&lt;</button>
+      </div>
+      <div class="arrows-right">
+        <button id="nextBtn" hidden>&gt;</button>
+      </div>
+
+      <div class="indicators" id="indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="container">
+        <div class="welcome-content">
+          <h2>WELCOME TO LAPZONE</h2>
+          <p>
+            Your premier destination for high-quality laptops. We offer the
+            latest models from top brands, with options for every need and
+            budget. From gaming rigs to business workstations, we have the
+            perfect laptop for you. Enjoy 24/7 customer support and fast
+            delivery.
+          </p>
+          <button class="welcome-btn">Learn more</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Category Section -->
+    <section class="destinations-title-section">
+      <div class="container">
+        <h2 class="section-title">Popular Laptop Categories</h2>
+      </div>
+    </section>
+
+    <section class="destinations-section">
+      <div class="container">
+        <div class="destination-item">
+          <div class="destination-header" onclick="toggleDestination(this)">
+            <h3>GAMING LAPTOPS</h3>
+            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+          </div>
+          <div class="destination-content">
+            <p>
+              High-performance laptops with powerful graphics cards, fast
+              processors, and advanced cooling systems designed for the ultimate
+              gaming experience.
+            </p>
+          </div>
+        </div>
+        <div class="destination-item">
+          <div class="destination-header" onclick="toggleDestination(this)">
+            <h3>BUSINESS LAPTOPS</h3>
+            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+          </div>
+          <div class="destination-content">
+            <p>
+              Professional laptops with enhanced security features, long battery
+              life, and durable designs perfect for business travelers and
+              office use.
+            </p>
+          </div>
+        </div>
+        <div class="destination-item">
+          <div class="destination-header" onclick="toggleDestination(this)">
+            <h3>ULTRABOOKS</h3>
+            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+          </div>
+          <div class="destination-content">
+            <p>
+              Lightweight, thin, and powerful laptops with premium designs,
+              excellent battery life, and high-resolution displays for
+              professionals on the go.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                />
+                <div class="small-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support / Requests Section -->
+    <section class="translation-section">
+      <div class="container">
+        <div class="translation-card">
+          <h3 class="translation-title">Technical Support</h3>
+          <div class="translation-input-container">
+            <textarea
+              class="translation-input"
+              placeholder="Describe your technical issue here"
+            ></textarea>
+          </div>
+          <div class="translation-actions">
+            <button class="copy-btn" onclick="copyText()">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+            <button class="translate-btn">
+              <i class="fas fa-headset"></i> Submit Ticket
+            </button>
+          </div>
+        </div>
+        <div class="translation-card">
+          <h3 class="translation-title">Product Feedback</h3>
+          <div class="translation-input-container">
+            <textarea
+              class="translation-input"
+              placeholder="Share your feedback about our products"
+            ></textarea>
+          </div>
+          <div class="translation-actions">
+            <button class="copy-btn" onclick="copyText2()">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+            <button class="translate-btn">
+              <i class="fas fa-comment"></i> Submit Feedback
+            </button>
+          </div>
+        </div>
+        <div class="translation-card">
+          <h3 class="translation-title">Custom Order Request</h3>
+          <div class="translation-input-container">
+            <textarea
+              class="translation-input"
+              placeholder="Describe your custom laptop requirements"
+            ></textarea>
+          </div>
+          <div class="translation-actions">
+            <button class="copy-btn" onclick="copyText3()">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+            <button class="translate-btn">
+              <i class="fas fa-laptop"></i> Request Quote
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copy Notification -->
+    <div class="copy-notification-white" id="copyNotification">
+      <div class="notification-content">
+        <span class="notification-message">Text copied to clipboard</span>
+        <span class="notification-ok">OK</span>
+      </div>
+    </div>
+
+    <!-- Parallax Divider 1 -->
+    <div class="div6"></div>
+
+    <!-- Brands Gallery Section -->
+    <section class="destinations-gallery">
+      <div class="container">
+        <h2 class="gallery-title">Top Laptop Brands</h2>
+        <div class="destinations-grid">
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('image/pexels-userpascal-33411276.jpg');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">Lenovo ThinkPad</h3>
+              <p class="city-description">Designed for serious work</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('image/pexels-morningtrain-18104.jpg');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">Dell XPS</h3>
+              <p class="city-description">Combines power with elegance</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('image/pexels-life-of-pix-7974.jpg');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">MacBook</h3>
+              <p class="city-description">Built for creative professionals</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">HP</h3>
+              <p class="city-description">Business solutions</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">ASUS</h3>
+              <p class="city-description">Gaming excellence</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('image/pexels-pixabay-434346.jpg');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">APPLE</h3>
+              <p class="city-description">Value for money</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('image/pexels-morningtrain-18104.jpg');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">DELL</h3>
+              <p class="city-description">Reliable performance</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">ACER</h3>
+              <p class="city-description">Premium quality</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div
+              class="destination-image"
+              style="background-image: url('https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"
+            >
+              <div class="image-overlay"></div>
+            </div>
+            <div class="destination-info">
+              <h3 class="city-name">LENOVO</h3>
+              <p class="city-description">Innovative designs</p>
+              <button class="read-more-btn">View Products</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax Divider 2 -->
+    <div class="div66"></div>
+
+    <!-- Podcast Section -->
+    <div class="container py-3">
+      <div class="podcast-container mb-4">
+        <div class="podcast-text">
+          <div class="podcast-date">
+            <i class="fas fa-calendar-alt"></i> Mon, May 25th 2020
+          </div>
+          <h1 class="podcast-title">Laptop Maintenance Tips</h1>
+          <p class="podcast-description">
+            Learn how to keep your laptop running smoothly with our expert
+            maintenance tips. From cleaning your keyboard to optimizing battery
+            life, we cover all the essential practices to extend the lifespan of
+            your device and maintain peak performance.
+          </p>
+          <div class="buttons">
+            <button class="btn btn-secondary btn-sm">
+              <i class="fas fa-podcast"></i>&nbsp; Tech Talk
+            </button>
+            <button class="btn btn-dark btn-sm">
+              <i class="fas fa-clock"></i>&nbsp; 55 mins
+            </button>
+            <button class="btn btn-primary btn-sm">
+              <i class="fas fa-play"></i>&nbsp; Play
+            </button>
+          </div>
+        </div>
+        <img
+          src="image/pexels-fotios-photos-1266982.jpg"
+          alt="Podcast Cover"
+          class="podcast-image"
+        />
+      </div>
+
+      <div class="podcast-container mb-4">
+        <img
+          src="image/pexels-tobias-dziuba-319638-927629.jpg"
+          alt="Podcast Cover"
+          class="podcast-image reverse"
+        />
+        <div class="podcast-text">
+          <div class="podcast-date">
+            <i class="fas fa-calendar-alt"></i> Tue, May 26th 2020
+          </div>
+          <h1 class="podcast-title">Gaming Laptop Buying Guide</h1>
+          <p class="podcast-description">
+            Not sure what to look for in a gaming laptop? This episode breaks
+            down the key specifications you need to consider - from GPU and CPU
+            performance to display refresh rates and cooling systems. Make an
+            informed decision for your next gaming machine.
+          </p>
+          <div class="buttons">
+            <button class="btn btn-secondary btn-sm">
+              <i class="fas fa-podcast"></i>&nbsp; Tech Talk
+            </button>
+            <button class="btn btn-dark btn-sm">
+              <i class="fas fa-clock"></i>&nbsp; 48 mins
+            </button>
+            <button class="btn btn-primary btn-sm">
+              <i class="fas fa-play"></i>&nbsp; Play
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="podcast-container mb-4">
+        <div class="podcast-text">
+          <div class="podcast-date">
+            <i class="fas fa-calendar-alt"></i> Wed, May 27th 2020
+          </div>
+          <h1 class="podcast-title">Future of Laptop Technology</h1>
+          <p class="podcast-description">
+            Explore the emerging trends in laptop technology, from foldable
+            screens to AI-enhanced performance and revolutionary battery
+            technologies. Get a glimpse into what the next generation of laptops
+            will offer and how it will change how we work and play.
+          </p>
+          <div class="buttons">
+            <button class="btn btn-secondary btn-sm">
+              <i class="fas fa-podcast"></i>&nbsp; Tech Talk
+            </button>
+            <button class="btn btn-dark btn-sm">
+              <i class="fas fa-clock"></i>&nbsp; 60 mins
+            </button>
+            <button class="btn btn-primary btn-sm">
+              <i class="fas fa-play"></i>&nbsp; Play
+            </button>
+          </div>
+        </div>
+        <img
+          src="image/pexels-kevin-paster-929016-1901388.jpg"
+          alt="Podcast Cover"
+          class="podcast-image"
+        />
+      </div>
+
+      <div class="podcast-container mb-4">
+        <img
+          src="image/pexels-pixabay-4158.jpg"
+          alt="Podcast Cover"
+          class="podcast-image reverse"
+        />
+        <div class="podcast-text">
+          <div class="podcast-date">
+            <i class="fas fa-calendar-alt"></i> Thu, May 28th 2020
+          </div>
+          <h1 class="podcast-title">Productivity Hacks with Your Laptop</h1>
+          <p class="podcast-description">
+            Discover software tools, keyboard shortcuts, and workflow
+            optimizations that can dramatically increase your productivity.
+            Whether you're a student, professional, or creative, these tips will
+            help you get more done in less time with your laptop.
+          </p>
+          <div class="buttons">
+            <button class="btn btn-secondary btn-sm">
+              <i class="fas fa-podcast"></i>&nbsp; Tech Talk
+            </button>
+            <button class="btn btn-dark btn-sm">
+              <i class="fas fa-clock"></i>&nbsp; 42 mins
+            </button>
+            <button class="btn btn-primary btn-sm">
+              <i class="fas fa-play"></i>&nbsp; Play
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community / Network Section -->
+    <div class="net-sec">
+      <div class="container">
+        <h3>Join us and stay connected with the tech world.</h3>
+        <div class="net-icos">
+          <div class="net-blk twit">
+            <div class="net-ttl">Follow</div>
+            <div class="net-icn">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <p class="net-txt">Tech updates</p>
+          </div>
+          <div class="net-blk whats">
+            <div class="net-ttl">Chat with us</div>
+            <div class="net-icn">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <p class="net-txt">Quick support</p>
+          </div>
+          <div class="net-blk linkd">
+            <div class="net-ttl">Connect</div>
+            <div class="net-icn">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <p class="net-txt">Professional network</p>
+          </div>
+          <div class="net-blk instg">
+            <div class="net-ttl">Follow</div>
+            <div class="net-icn">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <p class="net-txt">New products</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <img
+            src="image/pexels-morningtrain-18104.jpg"
+            alt="LapZone Logo"
+            class="nav-logo2"
+          />
+          <h2 class="logo">LapZone</h2>
+          <p>
+            Your ultimate destination for top-quality laptops and accessories.
+            We provide trusted brands with great prices and customer
+            satisfaction.
+          </p>
+          <ul class="contact-info">
+            <li><i class="fa-solid fa-envelope"></i> support@lapzone.com</li>
+            <li><i class="fa-solid fa-phone"></i> +20 100 000 0000</li>
+            <li><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Shop</h3>
+          <a href="#">Laptops</a>
+          <a href="#">Accessories</a>
+          <a href="#">Brands</a>
+          <a href="#">Deals</a>
+        </div>
+
+        <div class="footer-links">
+          <h3>Support</h3>
+          <a href="#">Help Center</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Warranty</a>
+          <a href="#">FAQ</a>
+        </div>
+
+        <div class="footer-links">
+          <h3>Company</h3>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 LapZone. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="JS/script.js"></script>
+  </body>
+</html>
